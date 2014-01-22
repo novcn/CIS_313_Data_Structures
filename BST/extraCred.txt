@@ -1,0 +1,23 @@
+O(logn) runtime for a BST occurs when the tree is complete.
+logn is the height of a complete BT, and our functions perform
+at O(h)
+
+a case where this breaks down would be if we inserted items
+that were either monotonically increasing or decreasing,
+In the decreasing case this would cause each new element to be
+the new furthest left leaf of the tree. 
+
+in the worst case we would have 0(n) insertion, find and remove
+because we would need reach the end of the tree, which would be
+isomorphic to a linked list.
+
+In the example I added characters from the alphabet into our BST
+in monotonically increasing order causing the tree to be isomorphic
+to a linked list. The total time this took was 3716374 nano seconds,
+at 142937 nano seconds per operation on average.
+
+In the average case example, which was a random ordering of the alphabet
+the total time was 3088508 nano seconds, at 118788 nano seconds per operation
+on average. This is clearly faster, although not by much because or sample
+size is so small. 
+
